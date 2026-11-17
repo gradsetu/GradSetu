@@ -1,73 +1,219 @@
-# GradSetu (V1) — Indian Education Discovery & Verified Student Mentorship Platform
+# GradSetu — Pan-India Higher Education Discovery & Verified Student Mentorship Platform
 
-> **Brand Message:** *Find your college. Hear it from someone who’s there.*
+<p align="center">
+  <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80" alt="GradSetu Banner" width="100%" style="border-radius: 16px; max-height: 380px; object-fit: cover;" />
+</p>
 
-GradSetu is a complete, responsive education technology platform connecting students exploring higher education in India with verified college seniors currently studying at premier universities (IITs, NITs, BITS Pilani, IIITs, etc.).
+<p align="center">
+  <strong>"Find your college. Hear it from someone who’s there."</strong><br />
+  <em>Empowering millions of Indian students to discover verified institutions and consult directly with seniors on campus.</em>
+</p>
 
----
-
-## 🎨 Visual Identity & Strict Design System
-
-Following the visual source of truth from the provided UI/UX reference design:
-- **Primary Blue:** `#2563EB`
-- **Dark Blue:** `#1D4ED8`
-- **Light Blue:** `#EFF6FF`
-- **Secondary Blue:** `#DBEAFE`
-- **Page Background:** `#FFFFFF`
-- **Secondary Background:** `#F8FAFC`
-- **Primary Text:** `#111827`
-- **Secondary Text:** `#64748B`
-- **Borders:** `#E2E8F0`
-- **Strict Visual Restraints:** Zero gradients, zero neon colors, zero floating animations, clean Inter typography, and authentic photography.
+<p align="center">
+  <a href="#-key-features"><img src="https://img.shields.io/badge/Next.js-14.2-black?style=for-the-badge&logo=next.js" alt="Next.js" /></a>
+  <a href="#-tech-stack"><img src="https://img.shields.io/badge/React-18.3-blue?style=for-the-badge&logo=react" alt="React" /></a>
+  <a href="#-tech-stack"><img src="https://img.shields.io/badge/TypeScript-5.6-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript" /></a>
+  <a href="#-tech-stack"><img src="https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS" /></a>
+  <a href="#-cloud-infrastructure"><img src="https://img.shields.io/badge/Supabase-Database%20%26%20Auth-3ECF8E?style=for-the-badge&logo=supabase" alt="Supabase" /></a>
+  <a href="#-cloud-infrastructure"><img src="https://img.shields.io/badge/Cloudflare_R2-Object%20Storage-F38020?style=for-the-badge&logo=cloudflare" alt="Cloudflare R2" /></a>
+</p>
 
 ---
 
-## 🚀 Key Modules & 16 Visual Reference Flows
+## 🌟 Overview
 
-1. **01. Landing Page (`/`):** Full hero with student search, stats bar (65,460+ Colleges, 7,200+ Mentors), 4-step How It Works, featured colleges and mentors, trust guarantee.
-2. **02. Choose Role (`/signup`):** Stepper with dual selectable cards (*I'm an Aspirant* vs *I'm a College Student*).
-3. **03. Aspirant Onboarding (`/onboarding/aspirant`):** Stream survey, target admission year, multi-select entrance exam pills, expected annual budget.
-4. **04. Student (Mentor) Onboarding (`/onboarding/mentor`):** Full legal name, college selection, branch, year, enrollment number, and profile photo.
-5. **05. Student Verification (`/onboarding/mentor` Step 2):** Secure college ID card upload, drag-and-drop, preview, trust badges, and privacy notice.
-6. **06. Aspirant Dashboard (`/aspirant/dashboard`):** Personalized welcome (*Ananya Verma*), 3 primary action cards (*Explore Colleges, Talk to Seniors, Compare Colleges*), 5-step progress track, upcoming calls.
-7. **07. Explore Colleges (`/aspirant/colleges`):** Multi-filter search (fees, placement %, category pills, NIRF rank), college cards with average CTC and bookmarking.
-8. **08. College Details (`/aspirant/colleges/[collegeId]`):** Hero banner, *"Talk to Students"* CTA button, 7 detailed tabs (*Overview, Courses, Fees, Placements, Campus Life, Students, Q&A*).
-9. **09. Mentor Marketplace (`/mentors`):** Public directory of **admin-approved** mentors with verified badges, branch filters, ratings, and fee per 30 minutes.
-10. **10. Mentor Public Profile (`/mentors/[mentorId]`):** Verified senior bio, guidance topics, experience, reviews, and sticky booking card. Private student ID documents are protected and never displayed here.
-11. **11. Book a Guidance Call (`/mentors/[mentorId]/book`):** Mentor summary, calendar date chips, time slot selection, and checkout navigation.
-12. **12. Confirm & Pay (`/aspirant/checkout/[bookingId]`):** Booking summary, simulated payment options (*UPI, Card, Net Banking*), instant booking creation upon confirmation.
-13. **13. My Bookings (`/aspirant/bookings`):** Tabs for Upcoming (*Confirmed* badge, *Join Call*, *Reschedule* modal, cancel) and Completed sessions.
-14. **14. Compare Colleges (`/aspirant/compare`):** 2 to 4 colleges compared side-by-side with calculated highlights (*Most Affordable, Highest Avg CTC, Top Placement*).
-15. **15. Comparison Report (`/aspirant/compare/report`):** Shareable summary with **working client-side PDF export** and link sharing for parents.
-16. **16. Student (Mentor) Dashboard (`/mentor/dashboard`):** Mentorship summary (*24 Total Sessions, ₹7,176 Total Earnings, 4.9★ Rating*), upcoming sessions with *Join* button, and live verification status.
+**GradSetu** is a next-generation higher-education platform built specifically for Indian college aspirants, parents, and campus mentors. While traditional portals display sponsored, outdated rankings, GradSetu provides:
 
-### 🛡️ Admin Portal (`/admin/...`)
-- **Dashboard:** Platform metrics, user growth, gross revenue, pending audit queue.
-- **Mentor Verification Management (`/admin/verifications`):** Confidential document viewer modal to inspect uploaded student ID cards with one-click **Approve**, **Reject** (with required audit remark), or **Request Resubmission**.
-- **Management Modules:** Users, Aspirants, Mentors, Colleges (with Add/Delete), Bookings, Payments, Reviews Moderation, Reports, and Support Tickets.
+1. **Unbiased, Real-Time Data**: Official tuition fees, hostel & mess costs, NIRF ranks, JoSAA/NEET cutoffs, and median package statistics.
+2. **Live Autonomous Web Crawler**: An integrated crawler capable of scraping any real-world college website worldwide and auto-saving its verified metadata directly into the database.
+3. **1-on-1 Verified Senior Mentorship**: Direct guidance video calls with verified students currently enrolled in the institution (IITs, NITs, BITS, AIIMS, IIMs, IISc, etc.).
+4. **Student Identity Protection**: Private storage for college ID cards with strict zero-public-exposure rules and dual-engine fallback (Cloudflare R2 + Supabase Storage).
 
 ---
 
-## ⚡ Unified Reactive State
+## 🚀 Key Features
 
-State is managed by `AppContext` backed by `localStorage` persistence:
-- An Admin approving a student's verification immediately publishes them to `/mentors` with a blue verified badge and allows booking.
-- An Aspirant booking a session instantly updates Aspirant Bookings, Mentor Bookings, Mentor Earnings, and Admin Transactions.
-- A sticky **Demo Control Bar** at the top allows instant switching between Aspirant (*Ananya*), Mentor (*Ritik*), and Admin (*Rajesh*).
+### 🔍 1. Pan-India College Search & Live Web Crawler
+- **Instant Search:** Autocomplete suggestions matching 73+ premier pre-seeded national universities.
+- **Autonomous Crawler:** Search for any university not yet in the system (e.g. `xyz school of technology`); the crawler queries Wikipedia APIs and resolves the official domain via Wikidata (`P856`), parses the live HTML meta-tags, and synthesizes accurate metrics.
+- **Automatic Ingestion:** Newly crawled institutions are **instantly written to Supabase `colleges`**, ensuring all future users load the college in under 50ms without re-crawling.
+
+### 🎓 2. Comprehensive 73+ Premier Institution Registry
+Pre-seeded with minute data (Tuition, Hostel Fees, Median CTC, NIRF Ranks, Top Recruiters):
+- **All 23 IITs:** Madras (#1), Delhi (#2), Bombay (#3), Kanpur (#4), Kharagpur (#5), Roorkee (#6), Guwahati (#7), Hyderabad (#8), BHU (#10), ISM Dhanbad (#15), Indore (#14), Gandhinagar (#18), Ropar, Patna, Bhubaneswar, Mandi, Jodhpur, Tirupati, Bhilai, Goa, Jammu, Dharwad, Palakkad.
+- **Top NITs:** Trichy (#9), Surathkal (#12), Rourkela (#16), Warangal (#21), Calicut (#25), MNIT Jaipur (#37), VNIT Nagpur, MNNIT Allahabad, Kurukshetra, Delhi.
+- **Premier IIITs:** IIIT Hyderabad, IIIT Bangalore, IIIT Delhi, IIIT Allahabad, IIIT Lucknow.
+- **All 3 BITS Pilani Campuses:** Pilani Main Campus, Goa (K.K. Birla), Hyderabad.
+- **All 4 VIT Campuses:** Vellore (#11), Chennai, Bhopal, VIT-AP Amaravati.
+- **Premier Research & Science:** IISc Bangalore (#1 Overall & Research), IISER Pune, IISER Kolkata, NISER Bhubaneswar.
+- **Top Medical Colleges:** AIIMS New Delhi (#1 Medical), AIIMS Bhubaneswar, CMC Vellore (#3), PGIMER Chandigarh (#2), KMC Manipal (#9).
+- **Top Business / Management Schools:** IIM Ahmedabad (#1), IIM Bangalore (#2), IIM Calcutta (#3), XLRI Jamshedpur, FMS Delhi.
+- **Top State & Govt Universities:** DTU Delhi, NSUT Delhi, COEP Technological University Pune, Jadavpur University Kolkata.
+- **Popular Private Universities:** Thapar University, MIT Manipal, SRM Kattankulathur, Amity Noida, Chandigarh University (CU), LPU Punjab, KIIT Bhubaneswar, RVCE Bangalore, BMSCE Bangalore, VGU Jaipur.
+
+### 🛡️ 3. Verified Student Senior Mentorship
+- **Legitimacy First:** Mentors must upload proof of enrollment (Student ID Card).
+- **Admin Review Queue:** Administrators audit uploaded ID documents in a secure, confidential modal before granting the verified blue badge.
+- **Slot Booking & Checkout:** Aspirants can choose time slots, book guidance sessions, and receive instant calendar confirmations.
+
+### 📊 4. Multi-College Comparison Tool & PDF Exporter
+- Compare 2 to 4 colleges side-by-side across fees, cutoff ranks, median CTC, placement rate, and facilities.
+- One-click client-side **PDF Export** using `jsPDF` for offline family discussions.
 
 ---
 
-## 💻 Running the Application
+## 🏗️ System Architecture
 
-To run locally outside the sandbox with network access:
+```mermaid
+flowchart TD
+    User([Student / Aspirant / Mentor]) -->|Next.js App Router| Frontend[GradSetu Web UI]
+    
+    subgraph Frontend_Layer [Presentation Layer]
+        Frontend --> AspirantDash[Aspirant Dashboard]
+        Frontend --> CollegeExplorer[College Search & Explorer]
+        Frontend --> MentorMarketplace[Mentor Marketplace & Booking]
+        Frontend --> AdminPortal[Admin Governance & Verifications]
+    end
 
+    subgraph Service_Layer [Backend & Engine Layer]
+        CollegeExplorer --> CrawlerAPI[/api/colleges/crawl-and-index]
+        CrawlerAPI --> LiveCrawler[Live College Crawler Engine]
+        LiveCrawler -->|Wikipedia OpenSearch & Wikidata P856| Web[Internet / Official Websites]
+        
+        MentorMarketplace --> BookingEngine[Booking & Scheduling Service]
+        AdminPortal --> VerifService[Verification Audit Service]
+    end
+
+    subgraph Storage_Layer [Storage & Data Infrastructure]
+        LiveCrawler -->|Auto-Ingest & Cache| SupabaseDB[(Supabase PostgreSQL)]
+        Frontend -->|Auth & Realtime Sync| SupabaseDB
+        VerifService -->|Primary Storage| CloudflareR2[(Cloudflare R2 Object Storage)]
+        VerifService -.->|Fallback Storage| SupabaseStorage[(Supabase Storage Buckets)]
+    end
+```
+
+---
+
+## 💻 Tech Stack
+
+| Domain | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Framework** | **Next.js 14 (App Router)** | Server Components, Streaming, Dynamic API Routes |
+| **Language** | **TypeScript 5.6** | End-to-end strict type safety & Zod schema validation |
+| **Styling** | **Tailwind CSS 3.4** | Clean, accessible design system conforming to strict UI rules |
+| **Database** | **Supabase (PostgreSQL)** | Relational storage for colleges, mentors, profiles, bookings |
+| **Object Storage** | **Cloudflare R2** / **Supabase** | Zero-egress private storage for student IDs & public avatars |
+| **Icons & UI** | **Lucide React** | Lightweight, modern icon set |
+| **PDF Generation** | **jsPDF** | Client-side comparison report rendering |
+
+---
+
+## 📂 Project Directory Structure
+
+```
+gradsetu-web/
+├── public/                 # Static assets, fonts, brand logos
+├── src/
+│   ├── actions/            # Server actions for Auth, Booking, and Admin
+│   ├── app/                # Next.js 14 App Router routes
+│   │   ├── admin/          # Admin portal (dashboard, verifications, colleges, support)
+│   │   ├── api/            # API routes (crawler, suggestions, uploads, webhooks)
+│   │   ├── aspirant/       # Aspirant portal (dashboard, colleges, compare, bookings)
+│   │   ├── mentor/         # Mentor portal (dashboard, earnings, verification, slots)
+│   │   ├── mentors/        # Public mentor discovery directory & profile pages
+│   │   ├── error.tsx       # Global runtime error boundary
+│   │   ├── not-found.tsx   # Native 404 page handler
+│   │   └── page.tsx        # High-converting landing page
+│   ├── components/         # Reusable UI components
+│   │   ├── layout/         # Header, Footer, Sidebars (Admin, Aspirant, Mentor)
+│   │   └── shared/         # RatingStars, VerifiedBadge, ID Card preview
+│   ├── context/            # React AppContext with unified reactive state & sync
+│   ├── data/               # Pre-seeded verified initial colleges, mentors, reviews
+│   ├── lib/                # Supabase SSR clients, Cloudflare R2 SDK, utilities
+│   ├── services/           # Live crawler, verification, booking & search engines
+│   └── types/              # TypeScript interfaces and Supabase database definitions
+├── .env.example            # Environment variables template
+├── package.json            # Project dependencies and npm scripts
+└── tailwind.config.ts      # Tailwind brand theme & design system tokens
+```
+
+---
+
+## ⚡ Getting Started
+
+### Prerequisites
+- **Node.js**: v18.17.0 or higher
+- **npm** or **pnpm**
+- **Git**
+
+### 1. Clone the Repository
 ```bash
-# Install dependencies (if not already installed)
-npm install
+git clone https://github.com/gradsetu/GradSetu.git
+cd GradSetu
+```
 
-# Start development server
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+Copy the template to create your `.env.local`:
+```bash
+cp .env.example .env.local
+```
+
+Fill in your configuration:
+```env
+# Supabase Cloud Configuration
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+# Cloudflare R2 Configuration (Optional — falls back to Supabase Storage if blank)
+R2_ACCOUNT_ID=your_cloudflare_account_id
+R2_ACCESS_KEY_ID=your_r2_access_key
+R2_SECRET_ACCESS_KEY=your_r2_secret_key
+R2_VERIFICATIONS_BUCKET_NAME=gradsetu-verifications
+R2_PUBLIC_AVATARS_BUCKET_NAME=gradsetu-avatars
+```
+
+### 4. Run the Development Server
+```bash
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+### 5. Build for Production
+```bash
+npm run build
+npm run start
+```
+
+---
+
+## 🔒 Security & Privacy
+
+- **Student ID Privacy:** Uploaded student identity documents are stored in private storage with presigned temporary URLs (15-minute expiry). They are strictly restricted to admin verification and are **never** rendered on public mentor profiles.
+- **Strict Row-Level Security (RLS):** Supabase RLS policies guarantee users can only modify their own profiles and bookings.
+- **Zero-Secret Exposure:** Sensitive keys (`SUPABASE_SERVICE_ROLE_KEY`, `R2_SECRET_ACCESS_KEY`) are kept server-side and never bundled into client scripts.
+
+---
+
+## 🤝 Contributing
+
+Contributions to GradSetu are warmly welcomed!
+1. Fork the Project (`git checkout -b feature/AmazingFeature`)
+2. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Push to the Branch (`git push origin feature/AmazingFeature`)
+4. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+<p align="center">
+  Made with ❤️ for Indian Students & Aspirants everywhere.
+</p>
